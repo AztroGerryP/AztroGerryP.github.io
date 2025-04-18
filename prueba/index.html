@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <link rel="stylesheet" href="./assets/css/estilos.css"> 
+</head>
+<body>
+    <!--Navegacion Hamburguesa estos dos se enlazan con for id-->
+    <input type="checkbox" id="menu-hamb-check">
+    <label for="menu-hamb-check" class="menu-hamb" onclick="activarBarra()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav id="nav-menu" class="nav-menu">
+        <ul>
+            <li><a href="#quiensoy" onclick="ocultarBarra()">Quien soy</a></li>
+            <li><a href="#tecnologias" onclick="ocultarBarra()">Tecnologias</a></li>
+            <li><a href="#actividades" onclick="ocultarBarra()">Actividades</a></li>
+            <li><a href="#" onclick="ocultarBarra()">Actividades Realizadas</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Header -->
+     <header class="header">
+        <h1 class="title">AztroGerry-Dev</h1>
+        <h2 class="subtitle">Mi Página Web</h2>
+     </header>
+
+    <!--Line divisoria-->
+    <span class="line"></span>
+
+    <!--Main / seccion quien soy-->
+    <main class="principal-containter" id="quiensoy">
+
+        <section class="container-quiensoy">
+            <h2 class="subtitle">¿QUIÉN SOY?</h2>
+             <p>En este proyecto hablaré un poco de mí, me considero una persona que le gusta estar aprendiendo cosas referentes a la tecnología referente a la creación de Páginas Web, uso de las Inteligencias Artificiales, Desarrolló de Videojuegos, entro otros que permitan resolver problemas de nuestra vida cotidiana.</p>
+            <p>Por otra parte me gusta realizar dibujos y el uso de aplicaciones que permitan el desarrollo en 3D como Blender o Maya.</p>
+            <p>He trabajado 15 años como docente impartiendo las clases de Matemáticas, enseñanza de las mismas y áreas referentes en programación como el uso de Arduino o la librería de Raylib, desarrollo de algoritmos usando Pseint, entre otros.</p>
+        </section>
+
+        <section class="container-tecnologias" id="tecnologias">
+
+            <h2 class="subtitle">MIS TECNOLOGÍAS FAVORITAS</h2>
+            <div class="cajas-grid">
+                <article class="html">
+                    <h3 class="subtitle2">HTML</h3>
+                    <img src="./assets/img/html.svg" alt="logo de html" class="img-html" title="lenguaje de marcado que se utiliza para estructurar y desplegar páginas web">
+                </article>
+                <article class="css">
+                    <h3 class="subtitle2">CSS</h3>
+                    <img src="./assets/img/css.svg" alt="logo de html" class="img-css" title="lenguaje de programación que se utiliza para definir el diseño de páginas web">
+                </article>
+                <article class="js">
+                    <h3 class="subtitle2">JAVASCRIPT</h3>
+                    <img src="./assets/img/js.svg" alt="logo de html" class="img-js" title="lenguaje de programación que se usa para crear contenido dinámico en páginas web">
+                </article>
+            </div>
+        </section>
+
+        <section class="container-actividades" id="actividades">
+            <h2 class="subtitle">MIS ACTIVIDADES FAVORITAS</h2>
+            <form action="">
+                <fieldset>
+                    <legend>Ingresar actividades</legend>
+                    <input type="text" maxlength="50" name="name" id="name" placeholder="Nombre de la actividad">
+                    <br>
+                    <textarea maxlength="100" name="message" id="message" placeholder="Descripcion de la imagen"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Ingresar la url</legend>
+                    <input type="text" name="img" id="img" placeholder="Nombre de url">
+                </fieldset>
+                <input type="submit" value="Agregar Actividad">
+                <br>
+            </form>
+                <span class="actividad">Sin actividades agregadas</span>
+        </section>
+
+    </main>
+
+     <!--Line divisoria-->
+     <span class="line"></span>
+
+    <script src="./output/app.js"></script>
+</body>
+</html>
